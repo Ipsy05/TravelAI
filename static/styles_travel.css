@@ -1,0 +1,103 @@
+/* Button styles */
+button {
+    color: rgb(22, 19, 19);
+    background-color: #ffa7c9;
+    border: 2px solid #ffa7c9;
+    padding: 10px;
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* Outer container styles */
+.outercontainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid white;
+    border-radius: 50px;
+}
+
+/* Conversation container styles */
+.conversationcontainer {
+    border: 5px solid #201e20;
+    padding: 10px;
+    height: 500px;
+    background-color: #fef5cb;
+    overflow-y: scroll;
+    border-radius: 50px;
+}
+
+/* Title style */
+#titlestyle {
+    color: black;
+    background-color: #fcd6fc;
+    border: 2px solid black;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+/* Input text box styles */
+#inputtextbox {
+    width: 85%;
+    border: 5px solid #66cdaa;
+    padding: 10px;
+    background-color: #fef5cb;
+    border-radius: 10px;
+}
+
+/* Submit button styles */
+#submitbutton {
+    background: url(/static/send-icon.png) no-repeat center center;
+    background-size: cover;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* User message styles */
+.user {
+    color: rgb(17, 16, 16);
+    background-color: #c4c4fa;
+    padding: 8px;
+    border-radius: 10px;
+    float: right;
+    clear: both;
+    max-width: 80%;
+    margin: 5px;
+}
+
+/* Bot message styles */
+.bot {
+    color: rgb(10, 10, 10);
+    background-color: #a7ecd5;
+    padding: 8px;
+    border-radius: 10px;
+    float: left;
+    clear: both;
+    max-width: 80%;
+    margin: 5px;
+}
+
+/* Center alignment */
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Form styles */
+form {
+    margin: 10px;
+}
+
+/* Body styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 50px;
+    color: black;
+}
