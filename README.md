@@ -44,4 +44,4 @@ Key takeaways from the project include:
 TravelAI offers an innovative solution for personalized travel planning in India. Despite challenges, the project demonstrates the potential of AI in enhancing user experiences and simplifying complex tasks like travel planning.
 
 ## Acknowledgment:
-This project was developed as part of an assignment under ShopAssistAI as Part Of UpGrad.
+This project was developed as part of an assignment under ShopAssistAI Module as part Of UpGrad GenAI Certification Course.
