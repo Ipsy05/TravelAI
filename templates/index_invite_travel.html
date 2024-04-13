@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the webpage -->
+    <title>TravelAI</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/static/styles_travel.css">
+    <!-- Internal style for typing animation -->
+    <style>
+        .typing-animation::after {
+            content: '...'; /* Initial content for typing animation */
+            animation: typing 1s infinite; /* Animation properties */
+        }
+
+        @keyframes typing {
+            0% { content: ''; } /* Keyframes for typing animation */
+            25% { content: '.'; }
+            50% { content: '..'; }
+            75% { content: '...'; }
+            100% { content: ''; }
+        }
+    </style>
+</head>
+<body style="background-color: #ffffff;"> <!-- Body starts here with background color set -->
+    <div class="outercontainer" style="border-color: white; background-color: white;">
+        <!-- Outer container with styles -->
+        <div class="center">
+            <!-- Center div -->
+            <h1 id="titlestyle" style="background-color: #f5ebf5;">TravelAI 🌍✈️🧳 <!-- Title with emoji and background color -->
+                <p style="font-family: 'Courier New', Courier, monospace; margin-top: 5px; font-size: 18px; font-style: italic;">Your ultimate travel guide</p> <!-- Subtitle -->
+            </h1>
+        </div>
+        <!-- Container for conversation with background color -->
+        <div class="conversationcontainer" id="chatcontainer" style="background-color: #faf8ef;">
+            <!-- Loop through conversation entries -->
+            {% for entry in name_xyz %}
+            <div class="{% if entry.bot %}bot{% else %}user{% endif %} {% if entry.bot and entry.typing %}typing-animation{% endif %}">
+                <!-- Apply appropriate class based on bot or user, and add typing animation if bot is typing -->
+                {% if entry.bot %}
+                {{ entry.bot }}
+                {% else %}
+                {{ entry.user }}
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Form for user input -->
+        <form action="/invite" method="POST" class="center">
+            <input type="text" name="user_input_message" id="inputtextbox" style="border-color: #85ad9f;">
+            <!-- Input field for user message -->
+            <input type="submit" value=" " id="submitbutton"> <!-- Submit button -->
+        </form>
+
+        <!-- Form for ending conversation -->
+        <form action="/end_conv" method="POST" class="center">
+            <button type="submit" style="background-color: #ffcccc; border-color: #ffcccc;">END CONVERSATION</button>
+            <!-- Button to end conversation -->
+        </form>
+    </div>
+
+    <script>
+        // JavaScript code for scrolling to the bottom of chat container on page load and after new message sent
+        function scrollToBottom() {
+            var chatContainer = document.getElementById('chatcontainer');
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // Call scrollToBottom function on page load
+        window.onload = scrollToBottom;
+
+        // JavaScript code to add typing animation class to bot messages when they are loading
+        var botMessages = document.querySelectorAll('.bot');
+        botMessages.forEach(function(message) {
+            if (message.textContent.trim() === '...') {
+                message.classList.add('typing-animation');
+            }
+        });
+    </script>
+
+</body>
+</html>
