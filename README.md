@@ -3,6 +3,9 @@
 ## Overview:
 TravelAI is an intelligent travel planner designed specifically for India. Leveraging datasets from Kaggle, it offers personalized recommendations for travelers exploring various destinations in the country. The system incorporates natural language processing (NLP) techniques to understand user inputs and generate tailored suggestions, enhancing the overall travel experience.
 
+![Screenshot](https://github.com/Ipsy05/TravelAI/blob/main/TravelAI_Snapshot.png)
+
+
 ## Objectives:
 The primary objectives of TravelAI include:
 - Creating a user-friendly interface for travelers to input their preferences and requirements.
