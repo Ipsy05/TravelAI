@@ -1,0 +1,56 @@
+The dataset used in this project was obtained from Kaggle and focuses on tourism data. It consists of two CSV files: "city.csv" and "places.csv". 
+These files contain columns with information related to various cities and tourist places, respectively.
+
+During preprocessing, I addressed missing data by removing and replacing entries where data was unavailable. 
+Null values were replaced with placeholders indicating the unavailability of data.
+
+The code structure and format were inspired by the approach used in a previous project called ShopAssistAI. 
+I adapted and modified the prompts, added new functionalities, and adjusted the code to suit the requirements of the travel assistant application.
+
+Additionally, I made changes to the front page by introducing new colors and typography to enhance the visual appeal and user experience.
+
+Although I conducted thorough testing with various scenarios and found the application to be functioning correctly, due to usage limitations,
+ I couldn't explore as many diverse scenarios as desired. However, I'm confident that the application will perform as intended based on the extensive testing conducted.
+
+ 1. app_travel.py:
+
+Description: app_travel.py is the main Python script responsible for running the Flask web application for TravelAI. It defines routes for different functionalities of the application, such as handling user input, displaying recommendations, and managing conversation flow.
+Functionality: Handles HTTP requests, interacts with Dialogflow and OpenAI's GPT-3.5 model, processes user inputs, generates responses, and renders HTML templates.
+Key Components:
+Flask routes for /, /invite, and /end_conv.
+Integration with Dialogflow for natural language understanding.
+Utilization of OpenAI's GPT-3.5 model for generating conversational responses.
+Role: Acts as the interface between the user and the AI-powered travel planner, facilitating smooth interactions and providing personalized recommendations.
+2. dialogueflow_travel.py:
+
+Description: dialogueflow_travel.py is a Python script that integrates Dialogflow into the TravelAI system. It manages the conversational flow by understanding user intents and extracting relevant information from user inputs.
+Functionality: Utilizes Dialogflow's natural language understanding capabilities to interpret user queries, extract parameters, and trigger appropriate actions or responses.
+Key Components:
+Intents, entities, and contexts defined within Dialogflow for handling different user requests and maintaining conversational context.
+Fulfillment webhook to connect Dialogflow with backend systems for processing user queries and generating responses.
+Role: Enables the AI system to understand user inputs, maintain context, and provide intelligent responses based on the user's intent and preferences.
+3. functions_travel.py:
+
+Description: functions_travel.py contains various Python functions utilized throughout the TravelAI system for data processing, recommendation generation, and conversation management.
+Functionality: Implements data preprocessing, recommendation validation, dictionary extraction, moderation checks, and conversation initialization.
+Key Components:
+Data preprocessing functions to clean and format the dataset obtained from Kaggle.
+Recommendation validation functions to filter and validate destination recommendations based on predefined criteria.
+Conversation initialization functions to set up the initial conversation flow and system prompts.
+Role: Provides essential functionalities for processing data, generating recommendations, and managing the conversation flow within the AI-powered travel planner.
+4. styles_travel.css:
+
+Description: styles_travel.css is a Cascading Style Sheets (CSS) file that defines the visual appearance and layout of the web interface for TravelAI.
+Functionality: Specifies the styling rules, colors, fonts, margins, and paddings for different HTML elements used in the web application.
+Key Components:
+Styling rules for conversation containers, input text boxes, submit buttons, and message bubbles.
+Color schemes, background colors, border styles, and font families to enhance the visual appeal and usability of the interface.
+Role: Enhances the user experience by defining the visual aesthetics and layout of the web interface, ensuring consistency and professionalism in design.
+5. index_invite_travel.html:
+
+Description: index_invite_travel.html is an HTML template file that serves as the main front-end interface for the TravelAI web application.
+Functionality: Defines the structure, layout, and content of the web pages displayed to the user, including input forms, conversation containers, and message display areas.
+Key Components:
+HTML elements such as forms, buttons, div containers, and text areas for user interaction and message display.
+Integration of Flask template tags for dynamic content rendering and variable passing from Python backend to HTML frontend.
+Role: Presents the user interface for interacting with the AI-powered travel planner, facilitating user input, displaying recommendations, and managing the conversation flow.
